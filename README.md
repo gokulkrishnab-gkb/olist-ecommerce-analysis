@@ -16,12 +16,16 @@ SQL (SQLite), Python (pandas), Git/GitHub
 ## Findings so far
 
 - Total revenue (delivered orders, excluding freight): about 13.2 million reais.
-- Revenue grew roughly 8x from Jan to Nov 2017, with a Black Friday spike in Nov 2017.
+- Revenue grew roughly 9x from Jan to Nov 2017, with a Black Friday spike in Nov 2017.
 - Growth came from order volume, not order value: average order value stayed
   around 125 to 150 reais throughout.
 - Revenue is spread across categories: the top 10 categories make up about 62%
   of revenue, and the largest (health_beauty) is only about 9%.
 - Most customers buy only once: 96,096 unique customers placed 99,441 orders.
+
+---
+
+- “MoM growth was strong through Nov 2017 (+52% at Black Friday), then flattened in 2018 (about -12% to +15% per month). Source: 03_growth.sql.”
 
 ## Project files
 
