@@ -39,3 +39,12 @@ FROM orders
 GROUP BY order_status
 ORDER BY total_orders DESC;
 
+-- ===== Data quality checks =====
+
+-- Q6: Products with no category name (these are dropped by the inner join in category queries)
+SELECT COUNT(*) FROM products WHERE product_category_name IS NULL;
+-- Result: 610
+
+-- Q7: Total products (to work out the percentage affected)
+SELECT COUNT(*) FROM products;
+-- Result: 32951
