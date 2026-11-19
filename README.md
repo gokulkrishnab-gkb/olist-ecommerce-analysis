@@ -51,7 +51,10 @@ SQL (SQLite), Python (pandas), Git/GitHub
 - São Paulo state has the most orders (41,746, about 42% of all orders).
   _Source: `02_revenue.sql`, top states._
 
-**Early signal on retention**
+- Only 3.0% of customers (2,801 of 93,358) placed more than one delivered order. New-customer
+  cohorts grew from 717 (Jan 2017) to 7,060 (Nov 2017), then stayed flat at about 5.9k to 6.8k
+  per month in 2018. Growth depends on acquiring new customers, not on repeat purchases.
+  *Source: `05_retention.sql`.*
 
 - 96,096 unique customers placed 99,441 orders, suggesting most customers buy once.
   Cohort retention (coming) will measure this properly.
