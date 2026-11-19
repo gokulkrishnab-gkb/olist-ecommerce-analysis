@@ -75,3 +75,17 @@ WHERE a.cohort_month >= '2017-01'
   AND a.month_number <= 6
 GROUP BY a.cohort_month, a.month_number
 ORDER BY a.cohort_month, a.month_number;
+
+-- Customers who ordered in 2 or more different months (stricter repeat definition)
+WITH active_months AS (
+    SELECT c.customer_unique_id,
+           COUNT(DISTINCT strftime('%Y-%m', o.order_purchase_timestamp)) AS months_active
+    FROM orders o
+    JOIN customers c ON c.customer_id = o.customer_id
+    WHERE o.order_status = 'delivered'
+    GROUP BY c.customer_unique_id
+)
+SELECT COUNT(*) AS total_customers,
+       SUM(CASE WHEN months_active > 1 THEN 1 ELSE 0 END) AS returned_in_later_month,
+       ROUND(SUM(CASE WHEN months_active > 1 THEN 1 ELSE 0 END) * 100.0 / COUNT(*), 2) AS returned_pct
+FROM active_months;
