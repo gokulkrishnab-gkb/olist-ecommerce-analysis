@@ -63,7 +63,18 @@ SQL (SQLite), Python (pandas, matplotlib), Git/GitHub
   A post-purchase retention offer could be worth testing.
 
 ### 4. Delivery performance
-*Coming next: late delivery rate, worst states, and the effect of late delivery on review scores.*
+- 6.77% of delivered orders (6,534 of 96,470) arrived after the estimated delivery date.
+  *Source: `06_delivery.sql`, late delivery rate.*
+- Among states with 500+ orders, the highest late rates are in MA (17.4%), CE (13.8%) and BA
+  (12.2%). RJ (12.1% on 12,350 orders) produces about 23% of all late deliveries.
+  *Source: `06_delivery.sql`, late rate by state.*
+- Estimates are conservative: even in the worst states, orders arrive 10 to 14 days before the
+  estimate on average, so late orders are exceptions.
+- Late orders average a review score of 2.27, against 4.29 for on-time orders, a gap of about
+  2 points. This is an association, not proof of cause.
+  *Source: `06_delivery.sql`, review score by delivery status.*
+- Implication: a small share of orders (about 7%) drives a large drop in satisfaction, so
+  improving delivery in a few high-volume states (RJ, BA) is the most practical target.
 
 ## Data quality notes
 - Data runs from Sep 2016 to Oct 2018. Sep to Dec 2016 is too sparse to use (Nov 2016 is
@@ -88,7 +99,7 @@ SQL (SQLite), Python (pandas, matplotlib), Git/GitHub
 | `03_growth.sql` | CTEs and window functions: MoM growth, running total, YoY growth |
 | `04_ranking.sql` | Ranking with PARTITION BY: top categories per year, top sellers per category |
 | `05_retention.sql` | Repeat customer rate, cohorts and the cohort retention table |
-| `06_delivery.sql` | Delivery performance and review scores (coming next) |
+| `06_delivery.sql` | Delivery performance and review scores  |
 
 ## How to reproduce
 1. Download the dataset "Brazilian E-Commerce Public Dataset by Olist" from Kaggle and place the
