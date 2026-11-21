@@ -2,6 +2,8 @@
 
 **Business summary:** [summary.md](summary.md) | **Notebook:** [analysis.ipynb](analysis.ipynb)
 
+**Headline:** Olist grew about 9x in 2017 by acquiring new customers, but growth flattened in 2018 because only about 3% of customers ever order again. Late deliveries affect about 7% of orders, yet cut review scores by about 2 points.
+
 ## Business problem
 I analysed about 100k orders from Olist, a Brazilian online marketplace (2016 to 2018),
 acting as a data analyst answering three questions from leadership:
@@ -12,7 +14,7 @@ acting as a data analyst answering three questions from leadership:
 ## Tools
 SQL (SQLite), Python (pandas, matplotlib), Git/GitHub
 
-## Findings so far
+## Key findings
 
 ### 1. Revenue and growth
 - Total revenue is about 13.2M reais (delivered orders, excluding freight).
@@ -123,7 +125,7 @@ SQL (SQLite), Python (pandas, matplotlib), Git/GitHub
 2. Install the requirements:
 
 ```
-pip install pandas matplotlib seaborn jupyter
+pip install -r requirements.txt
 ```
 
 3. Build the database:
