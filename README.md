@@ -1,5 +1,7 @@
 # Olist E-commerce Analysis (SQL + Python)
 
+**Business summary:** [summary.md](summary.md) | **Notebook:** [analysis.ipynb](analysis.ipynb)
+
 ## Business problem
 I analysed about 100k orders from Olist, a Brazilian online marketplace (2016 to 2018),
 acting as a data analyst answering three questions from leadership:
@@ -111,6 +113,9 @@ SQL (SQLite), Python (pandas, matplotlib), Git/GitHub
 | `04_ranking.sql` | Ranking with PARTITION BY: top categories per year, top sellers per category |
 | `05_retention.sql` | Repeat customer rate, cohorts and the cohort retention table |
 | `06_delivery.sql` | Delivery performance and review scores  |
+| `analysis.ipynb` | pandas notebook: delivery analysis and the four README charts |
+| `summary.md` | One-page business summary with recommendations |
+| `charts/` | Chart images used in this README |
 
 ## How to reproduce
 1. Download the dataset "Brazilian E-Commerce Public Dataset by Olist" from Kaggle and place the
@@ -133,4 +138,3 @@ python load_data.py
 Dataset: "Brazilian E-Commerce Public Dataset by Olist" on Kaggle. The data is not included in
 this repo.
 
-*Work in progress: delivery analysis, charts and a one-page business summary are next.*
