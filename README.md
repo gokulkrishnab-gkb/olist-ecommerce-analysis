@@ -76,6 +76,17 @@ SQL (SQLite), Python (pandas, matplotlib), Git/GitHub
 - Implication: a small share of orders (about 7%) drives a large drop in satisfaction, so
   improving delivery in a few high-volume states (RJ, BA) is the most practical target.
 
+## Charts
+
+![Monthly revenue](charts/monthly_revenue.png)
+
+![Cohort retention heatmap](charts/cohort_retention_heatmap.png)
+*Month 0 (always 100%) is omitted so the small retention values are visible.*
+
+![Late delivery rate by state](charts/late_rate_by_state.png)
+
+![Review score by delivery status](charts/review_by_delivery.png)
+
 ## Data quality notes
 - Data runs from Sep 2016 to Oct 2018. Sep to Dec 2016 is too sparse to use (Nov 2016 is
   missing), so trend analysis starts from Jan 2017 and ends at Aug 2018. The last months
